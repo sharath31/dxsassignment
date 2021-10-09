@@ -1,0 +1,18 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "exerciselambda": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "FunctionName": "exercise-lambda",
+        "Handler": "lambda/index.handler",
+        "Code": {
+          "S3Bucket": "dxcassign",
+          "S3Key": "exercise-lambda"
+        },
+        "Runtime": "nodejs8.10",
+        "Timeout": 300
+      }
+    }
+  }
+}
